@@ -11,6 +11,8 @@ sudo certbot certonly --webroot --webroot-path ./nginx/certbot/ -d test-devops2.
 5. Раскоментировать строки с 12 по 20 в файле  ./nginx/conf.d/test.conf
 6. Перезапустить nginx командой:
 docker restart nginx 
+7. Добавить права на исполнение файлам backup.sh и restore.sh
+chmod a+x backup.sh restore.sh
 
 **BACKUP**
 
