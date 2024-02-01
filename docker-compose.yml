@@ -6,7 +6,16 @@ services:
     container_name: flaskblog
     restart: always
     build: .
-    ports:
-      - 5000:5000
     volumes:
       - .:/app
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    volumes:
+      - /etc/letsencrypt/:/etc/nginx/ssl/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx/certbot/:/var/www/certbot
+    ports:
+      - 80:80
+      - 443:443
