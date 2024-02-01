@@ -2,16 +2,21 @@
 
 Подразумевается, что docker и certbot уже стоят, dns, фаервол и ssh настроены.
 1. Склонировать репозиторий:
+
 git clone https://github.com/volodichev-aleksey/flaskBlog-test.git
-2. Перейти в каталог и запустить:
+3. Перейти в каталог и запустить:
+
 docker compose up -d
-3. Получить le-сертификат командой:
+4. Получить le-сертификат командой:
+
 sudo certbot certonly --webroot --webroot-path ./nginx/certbot/ -d test-devops2.vizorlabs.ru
 ответить на вопросы
 5. Раскоментировать строки с 12 по 20 в файле  ./nginx/conf.d/test.conf
 6. Перезапустить nginx командой:
+
 docker restart nginx 
 7. Добавить права на исполнение файлам backup.sh и restore.sh
+
 chmod a+x backup.sh restore.sh
 
 
