@@ -1,6 +1,6 @@
 **DEPLOY**
 
-Подразумевается, что docker и certbot уже стоят.
+Подразумевается, что docker и certbot уже стоят, dns, фаервол и ssh настроены.
 1. Склонировать репозиторий:
 git clone https://github.com/volodichev-aleksey/flaskBlog-test.git
 2. Перейти в каталог и запустить:
