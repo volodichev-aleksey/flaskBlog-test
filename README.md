@@ -1,4 +1,5 @@
 **DEPLOY**
+
 Подразумевается, что docker и certbot уже стоят.
 1. Склонировать репозиторий:
 git clone https://github.com/volodichev-aleksey/flaskBlog-test.git
@@ -12,5 +13,6 @@ sudo certbot certonly --webroot --webroot-path ./nginx/certbot/ -d test-devops2.
 docker restart nginx 
 
 **BACKUP**
+
 Для бэкапа сервера выполнить в каталоге проекта файл backup.sh. В каталоге обозначенном в переменной backup_path будет создана копия базы с названием "db.дата_время" и симлинк на неё с названием db.latest. 
 Для восстановления необходимо выполнить файл restore.sh либо вручную скопировать нужную версию файлов из более ранних бэкапов.
