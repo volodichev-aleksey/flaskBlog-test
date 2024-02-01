@@ -14,6 +14,7 @@ docker restart nginx
 7. Добавить права на исполнение файлам backup.sh и restore.sh
 chmod a+x backup.sh restore.sh
 
+
 **BACKUP**
 
 Для бэкапа сервера выполнить в каталоге проекта файл backup.sh. В каталоге обозначенном в переменной backup_path будет создана копия базы с названием "db.дата_время" и симлинк на неё с названием db.latest.
